@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>TravelX | OTP Verification</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+:root{
+
+--pink:#ff4fa3;
+--rose:#ff6cb7;
+--orange:#ff914d;
+--purple:#9b4dff;
+--dark:#2d2d39;
+
+}
+
+body{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(
+135deg,
+#fff6fb,
+#ffffff,
+#f7f8ff
+);
+
+padding:25px;
+
+}
+
+/*=========================
+CARD
+=========================*/
+
+.otp-card{
+
+max-width:900px;
+width:100%;
+
+background:#fff;
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+/*=========================
+LEFT PANEL
+=========================*/
+
+.left-side{
+
+background:linear-gradient(
+135deg,
+#ff4fa3,
+#ff6cb7,
+#ff914d,
+#9b4dff
+);
+
+height:100%;
+
+padding:60px 45px;
+
+color:#fff;
+
+}
+
+.left-side i{
+
+font-size:75px;
+
+margin-bottom:25px;
+
+}
+
+.left-side h2{
+
+font-size:38px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.left-side p{
+
+font-size:17px;
+
+line-height:1.9;
+
+}
+
+/*=========================
+RIGHT PANEL
+=========================*/
+
+.right-side{
+
+padding:50px;
+
+}
+
+.page-title{
+
+font-size:34px;
+
+font-weight:700;
+
+color:var(--dark);
+
+}
+
+.page-sub{
+
+margin:12px 0 35px;
+
+color:#777;
+
+}
+
+/*=========================
+OTP BOXES
+=========================*/
+
+.otp-box{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+margin-bottom:30px;
+
+}
+
+.otp-input{
+
+width:60px;
+
+height:60px;
+
+border-radius:15px;
+
+border:2px solid #ececec;
+
+text-align:center;
+
+font-size:24px;
+
+font-weight:700;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.otp-input:focus{
+
+border-color:var(--pink);
+
+box-shadow:0 0 0 .2rem rgba(255,79,163,.15);
+
+}
+
+/*=========================
+BUTTON
+=========================*/
+
+.verify-btn{
+
+width:100%;
+
+height:55px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:17px;
+
+font-weight:600;
+
+color:#fff;
+
+background:linear-gradient(
+90deg,
+#ff4fa3,
+#ff6cb7,
+#ff914d,
+#9b4dff
+);
+
+transition:.35s;
+
+box-shadow:0 12px 25px rgba(255,79,163,.25);
+
+}
+
+.verify-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 35px rgba(255,79,163,.35);
+
+}
+
+/*=========================
+TIMER
+=========================*/
+
+.timer{
+
+text-align:center;
+
+margin-top:25px;
+
+font-weight:600;
+
+color:#777;
+
+}
+
+#resendOTP{
+
+display:none;
+
+text-align:center;
+
+margin-top:15px;
+
+color:var(--pink);
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+#resendOTP:hover{
+
+text-decoration:underline;
+
+}
+
+.error{
+
+display:none;
+
+text-align:center;
+
+color:red;
+
+margin-top:15px;
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:991px){
+
+.left-side{
+
+display:none;
+
+}
+
+.right-side{
+
+padding:35px 20px;
+
+}
+
+.otp-input{
+
+width:50px;
+
+height:50px;
+
+font-size:20px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="otp-card">
+
+<div class="row g-0">
+
+<!-- LEFT -->
+
+<div class="col-lg-5 d-none d-lg-block">
+
+<div class="left-side d-flex flex-column justify-content-center h-100">
+
+<i class="bi bi-envelope-check-fill"></i>
+
+<h2>
+
+OTP Verification
+
+</h2>
+
+<p>
+
+We've sent a secure One-Time Password (OTP) to your registered email address.
+
+Please enter the 6-digit code to continue resetting your password.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="col-lg-7">
+
+<div class="right-side">
+
+<h2 class="page-title">
+
+Verify OTP
+
+</h2>
+
+<p class="page-sub">
+
+Enter the 6-digit verification code.
+
+</p>
+
+<form id="otpForm">
+
+<div class="otp-box">
+
+<input type="text" maxlength="1" class="otp-input">
+
+<input type="text" maxlength="1" class="otp-input">
+
+<input type="text" maxlength="1" class="otp-input">
+
+<input type="text" maxlength="1" class="otp-input">
+
+<input type="text" maxlength="1" class="otp-input">
+
+<input type="text" maxlength="1" class="otp-input">
+
+</div>
+
+<div class="error" id="otpError">
+
+Please enter a valid 6-digit OTP.
+
+</div>
+
+<button
+type="submit"
+class="verify-btn">
+
+<i class="bi bi-check-circle-fill me-2"></i>
+
+Verify OTP
+
+</button>
+
+<div class="timer">
+
+OTP expires in
+<span id="countdown">
+
+30
+
+</span>
+seconds
+
+</div>
+
+<div id="resendOTP">
+
+Resend OTP
+
+</div>
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/*==========================================
+        OTP INPUT AUTO FOCUS
+==========================================*/
+
+const otpInputs = document.querySelectorAll(".otp-input");
+
+otpInputs.forEach((input,index)=>{
+
+    input.addEventListener("input",function(){
+
+        this.value=this.value.replace(/[^0-9]/g,"");
+
+        if(this.value.length===1 && index<otpInputs.length-1){
+
+            otpInputs[index+1].focus();
+
+        }
+
+    });
+
+    input.addEventListener("keydown",function(e){
+
+        if(e.key==="Backspace" && this.value==="" && index>0){
+
+            otpInputs[index-1].focus();
+
+        }
+
+    });
+
+});
+
+/*==========================================
+        PASTE OTP
+==========================================*/
+
+otpInputs[0].addEventListener("paste",function(e){
+
+    e.preventDefault();
+
+    const data=(e.clipboardData || window.clipboardData)
+    .getData("text")
+    .trim();
+
+    if(/^\d{6}$/.test(data)){
+
+        data.split("").forEach((num,index)=>{
+
+            otpInputs[index].value=num;
+
+        });
+
+        otpInputs[5].focus();
+
+    }
+
+});
+
+/*==========================================
+        COUNTDOWN TIMER
+==========================================*/
+
+let seconds = 30;
+
+const countdown = document.getElementById("countdown");
+
+const resend = document.getElementById("resendOTP");
+
+const timer = setInterval(function(){
+
+    seconds--;
+
+    countdown.innerHTML = seconds;
+
+    if(seconds<=0){
+
+        clearInterval(timer);
+
+        countdown.innerHTML="0";
+
+        resend.style.display="block";
+
+    }
+
+},1000);
+
+/*==========================================
+        RESEND OTP
+==========================================*/
+
+resend.addEventListener("click",function(){
+
+    seconds=30;
+
+    countdown.innerHTML=30;
+
+    resend.style.display="none";
+
+    alert("✅ New OTP Sent Successfully.");
+
+    const newTimer=setInterval(function(){
+
+        seconds--;
+
+        countdown.innerHTML=seconds;
+
+        if(seconds<=0){
+
+            clearInterval(newTimer);
+
+            resend.style.display="block";
+
+        }
+
+    },1000);
+
+});
+
+/*==========================================
+        VERIFY OTP
+==========================================*/
+
+const form=document.getElementById("otpForm");
+
+const error=document.getElementById("otpError");
+
+form.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    let otp="";
+
+    otpInputs.forEach(box=>{
+
+        otp+=box.value;
+
+    });
+
+    if(otp.length!==6){
+
+        error.style.display="block";
+
+        return;
+
+    }
+
+    error.style.display="none";
+
+    const btn=document.querySelector(".verify-btn");
+
+    btn.disabled=true;
+
+    btn.innerHTML=`
+    <span class="spinner-border spinner-border-sm me-2"></span>
+    Verifying...
+    `;
+
+    setTimeout(function(){
+
+        alert("✅ OTP Verified Successfully!");
+
+        window.location.href="reset-password.html";
+
+    },2000);
+
+});
+
+</script>
+
+</body>
+
+</html>

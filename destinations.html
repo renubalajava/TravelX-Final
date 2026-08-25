@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TravelX | Destinations</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Destination CSS -->
+    <link rel="stylesheet" href="css/destinations.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+                         NAVBAR
+    ===================================================== -->
+
+    <div id="navbar"></div>
+
+
+    <!-- =====================================================
+                         HERO
+    ===================================================== -->
+
+    <section class="destination-banner">
+
+        <div class="container">
+
+            <div class="banner-content">
+
+                <span class="hero-label">
+                    <i class="bi bi-compass"></i>
+                    DISCOVER THE WORLD
+                </span>
+
+                <h1>
+                    Explore Top Destinations
+                </h1>
+
+                <p>
+                    Find beautiful places around the world
+                    and create unforgettable travel memories.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                         SEARCH
+    ===================================================== -->
+
+    <section class="filter-section">
+
+        <div class="container">
+
+            <div class="destination-search">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    id="destinationSearch"
+                    type="text"
+                    placeholder="Search destinations...">
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+
+            <div class="filter-wrapper">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all">
+
+                    <i class="bi bi-globe"></i>
+                    All
+
+                </button>
+
+
+                <button
+                    class="filter-btn"
+                    data-filter="city">
+
+                    <i class="bi bi-buildings"></i>
+                    City
+
+                </button>
+
+
+                <button
+                    class="filter-btn"
+                    data-filter="beach">
+
+                    <i class="bi bi-water"></i>
+                    Beach
+
+                </button>
+
+
+                <button
+                    class="filter-btn"
+                    data-filter="mountain">
+
+                    <i class="bi bi-mountains"></i>
+                    Mountain
+
+                </button>
+
+
+                <button
+                    class="filter-btn"
+                    data-filter="island">
+
+                    <i class="bi bi-tsunami"></i>
+                    Island
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                    DESTINATION SECTION
+    ===================================================== -->
+
+    <section class="destination-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>
+                    TRAVEL INSPIRATION
+                </span>
+
+                <h2>
+                    Popular
+                    <strong>Destinations</strong>
+                </h2>
+
+                <p>
+                    Choose your next adventure and discover
+                    amazing places around the world.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                         DESTINATION GRID
+            ================================================= -->
+
+            <div
+                class="row g-4"
+                id="destinationGrid">
+
+
+                <!-- ================= PARIS ================= -->
+
+                <div
+                    class="col-lg-4 col-md-6 destination-item"
+                    data-category="city"
+                    data-name="paris france">
+
+                    <article class="destination-card">
+
+                        <div class="destination-image">
+
+                            <img
+                                src="images/destination1.jpg"
+                                alt="Paris France">
+
+                            <span class="destination-badge">
+                                <i class="bi bi-star-fill"></i>
+                                4.8
+                            </span>
+
+                            <span class="destination-type">
+                                City Tour
+                            </span>
+
+                            <button
+                                class="favorite-card"
+                                data-wishlist="0">
+
+                                <i class="bi bi-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="destination-location">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                                Paris, France
+
+                            </div>
+
+
+                            <h4>
+                                Paris, France
+                            </h4>
+
+
+                            <p>
+                                Experience the romance, art and culture
+                                of Paris. Explore the Eiffel Tower,
+                                Louvre Museum and beautiful French streets.
+                            </p>
+
+
+                            <div class="package-info">
+
+                                <span>
+                                    <i class="bi bi-clock"></i>
+                                    5 Days
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-moon-stars"></i>
+                                    4 Nights
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-person-check"></i>
+                                    Guided
+                                </span>
+
+                            </div>
+
+
+                            <div class="card-footer-row">
+
+                                <div>
+
+                                    <small>
+                                        Starting from
+                                    </small>
+
+                                    <strong>
+                                        $1,299
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="card-actions">
+
+                                    <button
+                                        class="explore-btn"
+                                        data-details="0">
+
+                                        Details
+
+                                    </button>
+
+
+                                    <button
+                                        class="card-cart-btn"
+                                        data-cart="0">
+
+                                        <i class="bi bi-cart-plus"></i>
+                                        Add
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ================= MALDIVES ================= - ->
+
+                <div
+                    class="col-lg-4 col-md-6 destination-item"
+                    data-category="beach island"
+                    data-name="maldives">
+
+                    <article class="destination-card">
+
+                        <div class="destination-image">
+
+                            <img
+                                src="images/destination2.jpg"
+                                alt="Maldives">
+
+                            <span class="destination-badge">
+                                <i class="bi bi-star-fill"></i>
+                                4.9
+                            </span>
+
+                            <span class="destination-type">
+                                Island Paradise
+                            </span>
+
+                            <button
+                                class="favorite-card"
+                                data-wishlist="1">
+
+                                <i class="bi bi-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="destination-location">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                                Maldives
+
+                            </div>
+
+
+                            <h4>
+                                Maldives
+                            </h4>
+
+
+                            <p>
+                                Relax beside turquoise waters and
+                                beautiful beaches while enjoying a
+                                peaceful tropical island escape.
+                            </p>
+
+
+                            <div class="package-info">
+
+                                <span>
+                                    <i class="bi bi-clock"></i>
+                                    4 Days
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-moon-stars"></i>
+                                    3 Nights
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-person-check"></i>
+                                    Guided
+                                </span>
+
+                            </div>
+
+
+                            <div class="card-footer-row">
+
+                                <div>
+
+                                    <small>
+                                        Starting from
+                                    </small>
+
+                                    <strong>
+                                        $1,899
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="card-actions">
+
+                                    <button
+                                        class="explore-btn"
+                                        data-details="1">
+
+                                        Details
+
+                                    </button>
+
+
+                                    <button
+                                        class="card-cart-btn"
+                                        data-cart="1">
+
+                                        <i class="bi bi-cart-plus"></i>
+                                        Add
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ================= SWITZERLAND ================= -->
+
+                <div
+                    class="col-lg-4 col-md-6 destination-item"
+                    data-category="mountain"
+                    data-name="switzerland">
+
+                    <article class="destination-card">
+
+                        <div class="destination-image">
+
+                            <img
+                                src="images/destination3.jpg"
+                                alt="Switzerland">
+
+                            <span class="destination-badge">
+                                <i class="bi bi-star-fill"></i>
+                                4.9
+                            </span>
+
+                            <span class="destination-type">
+                                Mountain Adventure
+                            </span>
+
+                            <button
+                                class="favorite-card"
+                                data-wishlist="2">
+
+                                <i class="bi bi-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="destination-location">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                                Switzerland
+
+                            </div>
+
+
+                            <h4>
+                                Switzerland
+                            </h4>
+
+
+                            <p>
+                                Discover the Swiss Alps, beautiful lakes,
+                                mountain villages and scenic train journeys.
+                            </p>
+
+
+                            <div class="package-info">
+
+                                <span>
+                                    <i class="bi bi-clock"></i>
+                                    6 Days
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-moon-stars"></i>
+                                    5 Nights
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-person-check"></i>
+                                    Guided
+                                </span>
+
+                            </div>
+
+
+                            <div class="card-footer-row">
+
+                                <div>
+
+                                    <small>
+                                        Starting from
+                                    </small>
+
+                                    <strong>
+                                        $2,199
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="card-actions">
+
+                                    <button
+                                        class="explore-btn"
+                                        data-details="2">
+
+                                        Details
+
+                                    </button>
+
+
+                                    <button
+                                        class="card-cart-btn"
+                                        data-cart="2">
+
+                                        <i class="bi bi-cart-plus"></i>
+                                        Add
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ================= BALI ================= -->
+
+                <div
+                    class="col-lg-4 col-md-6 destination-item"
+                    data-category="beach island"
+                    data-name="bali indonesia">
+
+                    <article class="destination-card">
+
+                        <div class="destination-image">
+
+                            <img
+                                src="images/gallery5.jpg"
+                                alt="Bali">
+
+                            <span class="destination-badge">
+                                <i class="bi bi-star-fill"></i>
+                                4.8
+                            </span>
+
+                            <span class="destination-type">
+                                Island Getaway
+                            </span>
+
+                            <button
+                                class="favorite-card"
+                                data-wishlist="3">
+
+                                <i class="bi bi-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="destination-location">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                                Bali, Indonesia
+
+                            </div>
+
+
+                            <h4>
+                                Bali, Indonesia
+                            </h4>
+
+
+                            <p>
+                                Discover Bali's tropical beaches,
+                                ancient temples, waterfalls and
+                                peaceful natural landscapes.
+                            </p>
+
+
+                            <div class="package-info">
+
+                                <span>
+                                    <i class="bi bi-clock"></i>
+                                    5 Days
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-moon-stars"></i>
+                                    4 Nights
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-person-check"></i>
+                                    Guided
+                                </span>
+
+                            </div>
+
+
+                            <div class="card-footer-row">
+
+                                <div>
+
+                                    <small>
+                                        Starting from
+                                    </small>
+
+                                    <strong>
+                                        $999
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="card-actions">
+
+                                    <button
+                                        class="explore-btn"
+                                        data-details="3">
+
+                                        Details
+
+                                    </button>
+
+
+                                    <button
+                                        class="card-cart-btn"
+                                        data-cart="3">
+
+                                        <i class="bi bi-cart-plus"></i>
+                                        Add
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ================= DUBAI ================= -->
+
+                <div
+                    class="col-lg-4 col-md-6 destination-item"
+                    data-category="city"
+                    data-name="dubai uae">
+
+                    <article class="destination-card">
+
+                        <div class="destination-image">
+
+                            <img
+                                src="images/gallery6.jpg"
+                                alt="Dubai">
+
+                            <span class="destination-badge">
+                                <i class="bi bi-star-fill"></i>
+                                4.7
+                            </span>
+
+                            <span class="destination-type">
+                                Luxury City
+                            </span>
+
+                            <button
+                                class="favorite-card"
+                                data-wishlist="4">
+
+                                <i class="bi bi-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="destination-location">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                                Dubai, UAE
+
+                            </div>
+
+
+                            <h4>
+                                Dubai, UAE
+                            </h4>
+
+
+                            <p>
+                                Experience Dubai's luxury lifestyle,
+                                spectacular skyscrapers, desert adventures
+                                and world-class shopping.
+                            </p>
+
+
+                            <div class="package-info">
+
+                                <span>
+                                    <i class="bi bi-clock"></i>
+                                    4 Days
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-moon-stars"></i>
+                                    3 Nights
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-person-check"></i>
+                                    Guided
+                                </span>
+
+                            </div>
+
+
+                            <div class="card-footer-row">
+
+                                <div>
+
+                                    <small>
+                                        Starting from
+                                    </small>
+
+                                    <strong>
+                                        $1,499
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="card-actions">
+
+                                    <button
+                                        class="explore-btn"
+                                        data-details="4">
+
+                                        Details
+
+                                    </button>
+
+
+                                    <button
+                                        class="card-cart-btn"
+                                        data-cart="4">
+
+                                        <i class="bi bi-cart-plus"></i>
+                                        Add
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ================= GOA ================= -->
+
+                <div
+                    class="col-lg-4 col-md-6 destination-item"
+                    data-category="beach"
+                    data-name="goa india">
+
+                    <article class="destination-card">
+
+                        <div class="destination-image">
+
+                            <img
+                                src="images/gallery7.jpg"
+                                alt="Goa">
+
+                            <span class="destination-badge">
+                                <i class="bi bi-star-fill"></i>
+                                4.6
+                            </span>
+
+                            <span class="destination-type">
+                                Beach Holiday
+                            </span>
+
+                            <button
+                                class="favorite-card"
+                                data-wishlist="5">
+
+                                <i class="bi bi-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="destination-location">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+
+                                Goa, India
+
+                            </div>
+
+
+                            <h4>
+                                Goa, India
+                            </h4>
+
+
+                            <p>
+                                Enjoy Goa's beautiful beaches,
+                                exciting water sports, nightlife
+                                and relaxing coastal experiences.
+                            </p>
+
+
+                            <div class="package-info">
+
+                                <span>
+                                    <i class="bi bi-clock"></i>
+                                    4 Days
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-moon-stars"></i>
+                                    3 Nights
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-person-check"></i>
+                                    Guided
+                                </span>
+
+                            </div>
+
+
+                            <div class="card-footer-row">
+
+                                <div>
+
+                                    <small>
+                                        Starting from
+                                    </small>
+
+                                    <strong>
+                                        $699
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="card-actions">
+
+                                    <button
+                                        class="explore-btn"
+                                        data-details="5">
+
+                                        Details
+
+                                    </button>
+
+
+                                    <button
+                                        class="card-cart-btn"
+                                        data-cart="5">
+
+                                        <i class="bi bi-cart-plus"></i>
+                                        Add
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- NO RESULTS -->
+
+            <div
+                class="no-results"
+                id="noResults">
+
+                <i class="bi bi-search"></i>
+
+                <h3>
+                    No destinations found
+                </h3>
+
+                <p>
+                    Try another destination or category.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                           CTA
+    ===================================================== -->
+
+    <section class="destination-cta">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+                <div>
+
+                    <span>
+                        START YOUR JOURNEY
+                    </span>
+
+                    <h2>
+                        Where will you go next?
+                    </h2>
+
+                    <p>
+                        Plan your perfect trip with TravelX.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="booking.html"
+                    class="cta-btn">
+
+                    Plan My Trip
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+                      DETAILS MODAL
+    ===================================================== -->
+
+    <div
+        class="destination-modal"
+        id="destinationModal">
+
+        <div
+            class="modal-overlay"
+            id="modalOverlay">
+        </div>
+
+
+        <div class="destination-modal-box">
+
+            <button
+                class="modal-close"
+                id="modalClose">
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+
+            <div class="row g-0">
+
+                <div class="col-lg-6">
+
+                    <div class="modal-image-box">
+
+                        <img
+                            id="modalImage"
+                            src=""
+                            alt="Destination">
+
+                        <button
+                            class="modal-arrow modal-prev"
+                            id="modalPrev">
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
+
+
+                        <button
+                            class="modal-arrow modal-next"
+                            id="modalNext">
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="modal-content-box">
+
+                        <div class="modal-location">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            <span id="modalLocation"></span>
+
+                        </div>
+
+
+                        <h2 id="modalTitle"></h2>
+
+
+                        <div class="modal-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <strong id="modalRating"></strong>
+
+                            <span>
+                                Top rated
+                            </span>
+
+                        </div>
+
+
+                        <p id="modalDescription"></p>
+
+
+                        <div class="travel-details">
+
+                            <div class="travel-detail">
+
+                                <div class="detail-icon">
+                                    <i class="bi bi-calendar3"></i>
+                                </div>
+
+                                <div>
+
+                                    <small>
+                                        Best Time
+                                    </small>
+
+                                    <strong id="modalBestTime"></strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="travel-detail">
+
+                                <div class="detail-icon">
+                                    <i class="bi bi-thermometer-half"></i>
+                                </div>
+
+                                <div>
+
+                                    <small>
+                                        Temperature
+                                    </small>
+
+                                    <strong id="modalTemperature"></strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="travel-detail">
+
+                                <div class="detail-icon">
+                                    <i class="bi bi-camera-fill"></i>
+                                </div>
+
+                                <div>
+
+                                    <small>
+                                        Activities
+                                    </small>
+
+                                    <strong id="modalActivities"></strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="travel-detail">
+
+                                <div class="detail-icon">
+                                    <i class="bi bi-currency-dollar"></i>
+                                </div>
+
+                                <div>
+
+                                    <small>
+                                        Starting From
+                                    </small>
+
+                                    <strong id="modalPrice"></strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal-actions">
+
+                            <button
+                                class="wishlist-btn"
+                                id="wishlistBtn">
+
+                                <i class="bi bi-heart"></i>
+                                Wishlist
+
+                            </button>
+
+
+                            <button
+                                class="cart-btn"
+                                id="addToCartBtn">
+
+                                <i class="bi bi-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+
+                            <a
+                                class="modal-book-btn"
+                                id="modalBookBtn"
+                                href="booking.html">
+
+                                <i class="bi bi-airplane-fill"></i>
+                                Book This Trip
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+                           CART
+    ===================================================== -->
+
+    <div
+        class="cart-drawer"
+        id="cartDrawer">
+
+        <div class="cart-drawer-head">
+
+            <h3>
+
+                Your Cart
+
+                <span id="drawerCartCount">
+                    (0)
+                </span>
+
+            </h3>
+
+
+            <button id="cartClose">
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems">
+        </div>
+
+
+        <div
+            class="cart-empty"
+            id="cartEmpty">
+
+            <i class="bi bi-cart-x"></i>
+
+            <h4>
+                Your cart is empty
+            </h4>
+
+            <p>
+                Add a destination to start planning.
+            </p>
+
+        </div>
+
+
+        <div class="cart-drawer-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <a
+                href="booking.html"
+                class="cart-checkout-btn">
+
+                Proceed to Booking
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="drawer-overlay"
+        id="drawerOverlay">
+    </div>
+
+
+    <!-- =====================================================
+                           FOOTER
+    ===================================================== -->
+
+    <div id="footer"></div>
+
+
+    <!-- Bootstrap JS -->
+
+  
+       <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+
+    </script>
+
+
+    <!-- Common Components -->
+
+    <script src="js/include.js"></script>
+
+
+    <!-- Destination JavaScript -->
+
+    <script src="js/destination.js"></script>
+
+</body>
+
+</html>
